@@ -78,7 +78,6 @@ export default function Home() {
               <Link to="/videos" className="text-azul-900 mb-4 ml-5 mt-8 w-[18.75rem] rounded-xl border-2 border-borda-azul-25 p-2 font-yanone text-lg font-medium md:ml-24 md:p-3 md:text-[2.1875rem]">
                 Assista agora!
               </Link>
-              
             </div>
           </div>
         </div>
