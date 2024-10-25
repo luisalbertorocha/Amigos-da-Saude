@@ -6,28 +6,28 @@ export default function QuizArduino() {
     const cards = [
         {
             "id": 1,
-            "title": "Card 1",
+            "title": "Passo 1",
             "description": (
                 <>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nostrum ullam, explicabo consequuntur quam sit earum ea odit nulla laudantium et dolorem at, voluptatum magni? Dolorum minima impedit doloremque minus?</p>
+                    <p className=' text-4xl '>Para começar, pressione o botão vermelho no seu controle para iniciar o seu quizz. </p>
                 </>
             )
         },
         {
             "id": 2,
-            "title": "Card 2",
+            "title": "Passo 2",
             "description": (
                 <>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi error illum ducimus inventore, eveniet eius aperiam eos facilis obcaecati perferendis ratione sunt, beatae illo rem ad ullam veritatis tempora non.</p>
+                    <p className=' text-4xl '>Após iniciar o quizz, leia atentamente a pergunta e selecione a alternativa correta utilizando o seu controle.</p>
                 </>
             )
         },
         {
             "id": 3,
-            "title": "Card 3",
+            "title": "Passo 3",
             "description": (
                 <>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi error illum ducimus inventore, eveniet eius aperiam eos facilis obcaecati perferendis ratione sunt, beatae illo rem ad ullam veritatis tempora non.</p>
+                    <p className=' text-4xl '>Por fim, verifique quantas perguntas você acertou! </p>
                 </>
             )
         }
@@ -35,7 +35,11 @@ export default function QuizArduino() {
     ]
     return (
         <div className='flex flex-col gap-8 h-screen bg-azul-claro-100'>
-        <h1 className='text-6xl p-12 pb-0 md:mt-20 md:mb-12 text-teal-700'>Aprenda de um jeito mais divertido com nosso<b> quizz no controle!</b></h1>
+        <h1 className='text-6xl p-12 pb-0 md:mt-20 md:mb-0 text-teal-700'>Aprenda de um jeito mais divertido com nosso<b> quizz no controle!</b></h1>
+        <h2 className='text-6xl p-12 mt-0 pb-0 md:mt-0 md:mb-4 text-teal-700'>É muito simples. Confira como jogar: </h2>
+
+
+
         <Carousel
             additionalTransfrom={0}
             arrows

@@ -161,7 +161,7 @@ export default function Quiz() {
           </div>
 
           <div className="w-full md:h-full md:w-[25rem]">
-            <SearchVideos destino="videos" />
+            <SearchVideos destino="quiz" />
           </div>
         </div>
       </div>
