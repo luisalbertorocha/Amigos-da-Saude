@@ -16,7 +16,7 @@ export default function Personagem() {
       <div className="flex h-full flex-col-reverse justify-center gap-5 md:container md:mx-auto md:flex-row md:justify-between">
         <div className="px-4">
           <div className="border-azul-borda-fundo-1 container mx-auto flex h-[32rem] flex-col items-center rounded-3xl border bg-azul-fundo-2 px-4 py-6 md:h-[38rem] md:px-16">
-            <div className="absolute">
+            <div className="absolute drop-shadow-lg">
               <div className="relative h-full w-40 md:w-[13rem]">
                 <img
                   className="absolute"

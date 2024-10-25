@@ -36,25 +36,25 @@ export default function Header() {
         <nav className="hidden justify-around gap-2 md:flex md:gap-6">
           <Link
             to="/"
-            className="text-azul-tipografia-titulo md:bg-verde-botao md:hover:bg-verde-hover-botao md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
+            className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
             HOME
           </Link>
           <Link
             to="/personagem"
-            className="text-azul-tipografia-titulo md:bg-verde-botao md:hover:bg-verde-hover-botao md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
+            className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
             PERSONAGEM
           </Link>
           <Link
             to="/quiz/1"
-            className="text-azul-tipografia-titulo md:bg-verde-botao md:hover:bg-verde-hover-botao md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
+            className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
             QUIZ
           </Link>
           <Link
             to="/videos"
-            className="text-azul-tipografia-titulo md:bg-verde-botao md:hover:bg-verde-hover-botao md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
+            className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
             VIDEOS
           </Link>

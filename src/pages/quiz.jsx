@@ -57,7 +57,7 @@ export default function Quiz() {
       console.log("acabou");
       console.log(pontuacao);
 
-      pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao * 10}`;
+      pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao}`;
 
       alternativa1.classList.add("hidden");
       alternativa2.classList.add("hidden");
@@ -92,10 +92,12 @@ export default function Quiz() {
   return (
     <div className="flex pb-4 pt-20">
       <div className="flex w-full flex-col gap-6 md:gap-8">
-        <div className="w-full bg-amarelo-100">
+        <div className="bg-amarelo-fundo w-full">
           <div className="container mx-auto flex flex-col px-4 py-6">
-            <h2 className="font-yanone text-[3rem] font-bold">SUPER QUIZ</h2>
-            <p className="text-xl">
+            <h2 className="text-azul-tipografia-titulo font-yanone text-[3rem] font-bold tracking-wide">
+              SUPER QUIZ
+            </h2>
+            <p className="text-cinza-tipografia-texto font-poppins text-xl">
               Aqui voce podera brincar no nosso quiz sobre os videos que voce
               acabou de assitir.
             </p>
@@ -103,54 +105,54 @@ export default function Quiz() {
         </div>
 
         <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row md:justify-between xl:gap-10">
-          <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 py-6 md:px-10">
+          <div className="flex w-full grow flex-col gap-5 rounded-xl border bg-azul-fundo-2 px-4 py-6 md:px-10">
             <div className="border-b pb-4">
-              <h3 className="text-center font-nunito text-2xl font-semibold">
+              <h3 className="text-center font-nunito text-2xl font-bold tracking-wide">
                 Tema: {findExame.name}
               </h3>
             </div>
-            <div className="mt-6 flex flex-col gap-4">
+            <div className="mt-6 flex flex-col gap-4 p-5">
               <div className="flex flex-col gap-4">
                 <h3
                   id="pergunta-index"
-                  className="font-poppins text-4xl font-bold"
+                  className="text-azul-tipografia-titulo font-poppins text-4xl font-bold tracking-wide"
                 >
                   PERGUNTA {indexQuiz + 1}:
                 </h3>
                 <h3
                   id="pergunta"
-                  className="font-nunito text-xl font-semibold md:text-3xl"
+                  className="text-azul-tipografia-texto font-nunito text-xl font-semibold md:text-3xl"
                 >
                   {findExame.quiz[0].pergunta}
                 </h3>
               </div>
 
-              <div className="flex flex-col gap-4 mt-5">
+              <div className="mt-5 flex flex-col gap-4">
                 <p
                   id="alternativa1"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa1}
                 </p>
                 <p
                   id="alternativa2"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa2}
                 </p>
                 <p
                   id="alternativa3"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa3}
                 </p>
                 <p
                   id="alternativa4"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
                 >
                   {findExame.quiz[0].alternativas.alternativa4}
                 </p>
