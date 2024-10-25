@@ -3,6 +3,7 @@ import { AvatarContext } from "../context/AvatarProvider";
 import { ExamesContext } from "../context/ExamesProvider";
 import { useParams } from "react-router-dom";
 import { SearchVideos } from "../components/serchVideos";
+import  medico  from "../assets/medico.png"; 
 
 export default function VideoPage() {
   const { avatar, avatarInfo } = useContext(AvatarContext);
@@ -60,19 +61,9 @@ export default function VideoPage() {
           <div id="medico" className="absolute right-0 w-36 md:w-52">
             <div className="relative">
               <img
-                src={avatarInfo.pele[avatar.pele]}
+                src={medico}
                 alt=""
                 className="absolute"
-              />
-              <img
-                className="absolute"
-                src={avatarInfo.camisa[avatar.camisa]}
-                alt=""
-              />
-              <img
-                className="absolute"
-                src={avatarInfo.calca[avatar.calca]}
-                alt=""
               />
             </div>
           </div>
