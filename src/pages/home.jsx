@@ -58,7 +58,7 @@ export default function Home() {
                 jornada. É fácil e divertido - e o melhor de tudo, seu
                 personagem será o protagonista de suas aventuras!
               </p>
-              <Link to="/personagem" className="text-azul-900 ml-6 mt-8 w-[18.75rem] rounded-xl border-2 border-borda-azul-25 p-2 font-yanone text-lg font-medium md:p-3 md:text-[2.1875rem]">
+              <Link to="/personagem" className="text-azul-900 ml-6 mt-8 w-[18.75rem] md:mt-20 rounded-xl border-2 border-borda-azul-25 p-2 font-yanone text-lg font-medium md:p-3 md:text-[2.1875rem]">
                 Crie seu personagem!
               </Link>
             </div>
