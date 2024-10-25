@@ -47,16 +47,16 @@ export default function Header() {
             PERSONAGEM
           </Link>
           <Link
+            to="/videos"
+            className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
+            >
+            VIDEOS
+          </Link>
+          <Link  
             to="/quiz/1"
             className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
           >
             QUIZ
-          </Link>
-          <Link
-            to="/videos"
-            className="text-azul-tipografia-titulo md:bg-bege md:hover:bg-branco md:hover:text-cinza-tipografia-texto md:focus:bg-verde-focus-botao md:active:bg-verde-active-botao rounded-3xl text-sm font-medium transition hover:scale-110 md:px-4 md:py-2 md:focus:ring-2"
-          >
-            VIDEOS
           </Link>
         </nav>
       </div>

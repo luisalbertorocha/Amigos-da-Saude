@@ -1,5 +1,7 @@
 import { createContext, useState } from "react";
-
+import exame_sangue from "../assets/gota-sangue.png"
+import exame_tomograia from "../assets/tomografia.png"
+import exame_raiox from "../assets/raio-x.png"
 export const ExamesContext = createContext({});
 
 // eslint-disable-next-line react/prop-types
@@ -8,6 +10,7 @@ export const ExamesProvider = ({ children }) => {
     {
       id: "1",
       name: "Exame de sangue",
+      img: exame_sangue,
       videoDialogo: [
         "Personagem: Olá, tudo bem?",
         "Medico: Olá, tudo bem e você?",
@@ -79,6 +82,7 @@ export const ExamesProvider = ({ children }) => {
     {
       id: "2",
       name: "Tomografia",
+      img: exame_tomograia,
       videoDialogo: [
         "Personagem: Olá, Tomo?",
         "Medico: Olá, teste tomo e você?",
@@ -145,6 +149,7 @@ export const ExamesProvider = ({ children }) => {
     {
       id: "3",
       name: "Raio-x",
+      img: exame_raiox,
       videoDialogo: [],
       quiz: [
         {

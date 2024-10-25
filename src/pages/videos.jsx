@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import imagem from "../assets/banner-home.png";
 import { SearchVideos } from "../components/serchVideos";
 import { ExamesContext } from "../context/ExamesProvider";
 
@@ -22,9 +21,9 @@ export default function Videos() {
             >
               <Link to={exame.id} className="flex h-full flex-col">
                 <img
-                  src={imagem}
+                  src={exame.img}
                   alt=""
-                  className="h-full object-cover md:rounded-t-2xl"
+                  className="h-full object-contain md:rounded-t-2xl"
                 />
                 <h2 className="flex items-center justify-center bg-azul-claro-100 py-4 text-center font-nunito text-lg font-medium uppercase active:bg-lime-200 md:rounded-b-2xl">
                   {exame.name}
