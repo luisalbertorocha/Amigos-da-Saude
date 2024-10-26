@@ -2,6 +2,8 @@ import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
 import { SearchVideos } from "../components/serchVideos";
+import { CpuChipIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 export default function Quiz() {
   const { exames } = useContext(ExamesContext);
@@ -57,7 +59,7 @@ export default function Quiz() {
       console.log("acabou");
       console.log(pontuacao);
 
-      pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao * 10}`;
+      pergunta.innerHTML = `Acabou, sua pontuação foi: ${pontuacao}`;
 
       alternativa1.classList.add("hidden");
       alternativa2.classList.add("hidden");
@@ -92,65 +94,76 @@ export default function Quiz() {
   return (
     <div className="flex pb-4 pt-20">
       <div className="flex w-full flex-col gap-6 md:gap-8">
-        <div className="w-full bg-amarelo-100">
-          <div className="container mx-auto flex flex-col px-4 py-6">
-            <h2 className="font-yanone text-[3rem] font-bold">SUPER QUIZ</h2>
-            <p className="text-xl">
+        <div className="w-full bg-amarelo-fundo">
+          <div className="container mx-auto flex flex-col px-4 py-6 md:gap-1 gap-3">
+            <h2 className="font-yanone text-[3rem] font-bold tracking-wide text-azul-tipografia-titulo">
+              SUPER QUIZ
+            </h2>
+            <p className="font-poppins text-xl text-cinza-tipografia-texto">
               Aqui voce podera brincar no nosso quiz sobre os videos que voce
               acabou de assitir.
             </p>
+            <p className="font-poppins text-xl font-semibold text-azul-tipografia-texto md:text-lg">
+              Ou faça o Quiz usando um controle:
+            </p>
+            <Link
+              to="/quizArduino"
+              className="size-8 text-azul-tipografia-titulo flex transform md:hover:scale-110"
+            >
+              <CpuChipIcon />
+            </Link>
           </div>
         </div>
 
         <div className="container mx-auto flex w-full flex-col gap-4 px-4 md:flex-row md:justify-between xl:gap-10">
-          <div className="flex w-full grow flex-col gap-5 rounded-xl border px-4 py-6 md:px-10">
+          <div className="flex w-full grow flex-col gap-5 rounded-xl border bg-azul-fundo-2 px-4 py-6 md:px-10">
             <div className="border-b pb-4">
-              <h3 className="text-center font-nunito text-2xl font-semibold">
+              <h3 className="text-center font-nunito text-2xl font-bold tracking-wide">
                 Tema: {findExame.name}
               </h3>
             </div>
-            <div className="mt-6 flex flex-col gap-4">
+            <div className="mt-6 flex flex-col gap-4 p-5">
               <div className="flex flex-col gap-4">
                 <h3
                   id="pergunta-index"
-                  className="font-poppins text-4xl font-bold"
+                  className="font-poppins text-4xl font-bold tracking-wide text-azul-tipografia-titulo"
                 >
                   PERGUNTA {indexQuiz + 1}:
                 </h3>
                 <h3
                   id="pergunta"
-                  className="font-nunito text-xl font-semibold md:text-3xl"
+                  className="font-nunito text-xl font-semibold text-azul-tipografia-texto md:text-3xl"
                 >
                   {findExame.quiz[0].pergunta}
                 </h3>
               </div>
 
-              <div className="flex flex-col gap-4 mt-5">
+              <div className="mt-5 flex flex-col gap-4">
                 <p
                   id="alternativa1"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa1}
                 </p>
                 <p
                   id="alternativa2"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa2}
                 </p>
                 <p
                   id="alternativa3"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa3}
                 </p>
                 <p
                   id="alternativa4"
                   onClick={() => checarResposta()}
-                  className="cursor-pointer rounded-lg border px-3 py-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa4}
                 </p>
