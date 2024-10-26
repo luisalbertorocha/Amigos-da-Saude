@@ -3,7 +3,7 @@ import { AvatarContext } from "../context/AvatarProvider";
 import { ExamesContext } from "../context/ExamesProvider";
 import { useParams } from "react-router-dom";
 import { SearchVideos } from "../components/serchVideos";
-import  medico  from "../assets/medico.png"; 
+import medico from "../assets/medico.png";
 
 export default function VideoPage() {
   const { avatar, avatarInfo } = useContext(AvatarContext);
@@ -27,18 +27,21 @@ export default function VideoPage() {
 
   return (
     <div className="flex w-full flex-col pt-20">
-      <div className=" bg-amarelo-fundo p-4">
-        <h1 id="exame-title" className="font-yanone py-3 text-4xl tracking-wider md:tracking-wide text-azul-tipografia-titulo container mx-auto">
+      <div className="bg-amarelo-fundo p-4">
+        <h1
+          id="exame-title"
+          className="container mx-auto py-3 font-yanone text-4xl tracking-wider text-azul-tipografia-titulo md:tracking-wide"
+        >
           Tema: {findExame.name}
         </h1>
       </div>
 
-      <div className="container mx-auto grow ">
+      <div className="container mx-auto grow">
         <div
           id="exame"
-          className="relative h-[500px] gap-4 pt-3 sm:border border-azul-header md:h-[620px] bg-azul-fundo-2 mt-3"
+          className="relative mt-3 h-[500px] gap-4 border-azul-header bg-azul-fundo-2 pt-3 sm:border md:h-[620px]"
         >
-          <div id="personagem" className="absolute w-36 md:w-52">
+          <div id="personagem" className="absolute w-36 md:left-[10rem] md:w-52">
             <div className="relative">
               <img
                 className="absolute"
@@ -58,19 +61,18 @@ export default function VideoPage() {
             </div>
           </div>
 
-          <div id="medico" className="absolute right-0 w-36 md:w-52">
+          <div
+            id="medico"
+            className="absolute right-0 w-36 md:right-[10rem] md:w-52"
+          >
             <div className="relative">
-              <img
-                src={medico}
-                alt=""
-                className="absolute"
-              />
+              <img src={medico} alt="" className="absolute" />
             </div>
           </div>
 
           <p
             id="text-field"
-            className="bg-bege shadow-md shadow-azul-borda-fundo-1 mb-3 0 absolute bottom-1 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border px-5 py-5 font-poppins text-xl md:text-2xl"
+            className="bg-bege 0 absolute bottom-1 left-[50%] z-10 mb-3 w-[90%] translate-x-[-50%] rounded-lg border px-5 py-5 font-poppins text-xl shadow-md shadow-azul-borda-fundo-1 md:text-2xl"
           >
             {findExame.videoDialogo[0]}
           </p>
