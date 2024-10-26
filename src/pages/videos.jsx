@@ -19,7 +19,7 @@ export default function Videos() {
               key={exame.id}
               className="h-64 w-full cursor-pointer justify-self-center transition hover:scale-110 md:w-60"
             >
-              <Link to={exame.id} className="flex h-full flex-col">
+              <Link to={exame.id} className="flex h-full flex-col border border-azul-fundo-2 bg-branco1">
                 <img
                   src={exame.img}
                   alt=""

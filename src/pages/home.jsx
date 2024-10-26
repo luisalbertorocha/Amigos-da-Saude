@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className="pt-20">
-      <div className="h-[20rem] bg-banner-mobile bg-contain bg-top bg-no-repeat sm:h-[32rem] md:bg-banner md:bg-cover"></div>
+      <div className="h-[30rem] bg-banner-mobile bg-contain bg-top bg-no-repeat sm:h-[32rem] md:bg-banner md:bg-cover"></div>
       <div className="bg-azul-fundo-1 h-[120rem] md:h-[130rem]">
         <div className="container mx-auto flex flex-wrap justify-between gap-20 bg-azul-fundo-2 pt-16">
           <div className="w-full px-4 pb-10 text-azul-900 md:w-[60%]">
@@ -72,6 +72,24 @@ export default function Home() {
               </p>
               <button className="mb-4 ml-5 mt-8 w-[18.75rem] rounded-xl border-2 border-borda-azul-25 p-2 font-yanone text-lg font-medium text-azul-900 md:ml-24 md:p-3 md:text-[2.1875rem]">
                 Assista agora!
+              </button>
+            </div>
+          </div>
+          
+          <div className="absolute top-[28rem] z-20 flex h-auto w-full flex-col  bg-contain bg-left bg-no-repeat md:h-[42.5rem] md:flex-row md:bg-vetor4">
+            <div className="mt-16 w-full px-4 md:ml-10 md:mt-32 md:w-[45rem]">
+              <h3 className="text-azul-tipografia-titulo text-center font-yanone text-2xl text-[2.4rem] font-bold md:text-[2.8125rem]">
+                Crie Seu Personagem
+              </h3>
+              <p className="text-cinza-tipografia-texto md:text-[1.6rem] pt-5 text-left font-poppins text-[1.3rem] text-base leading-normal">
+                Solte a imaginação e crie um personagem que seja a sua cara!
+                Escolha entre uma variedade de roupas, acessórios e expressões
+                para criar um amigo especial que estará ao seu lado em toda a
+                jornada. É fácil e divertido - e o melhor de tudo, seu
+                personagem será o protagonista de suas aventuras!
+              </p>
+              <button className="ml-6 mt-8 w-[18.75rem] rounded-xl border-2 border-borda-azul-25 p-2 font-yanone text-lg font-medium text-azul-900 md:p-3 md:text-[2.1875rem]">
+                Crie seu personagem!
               </button>
             </div>
           </div>

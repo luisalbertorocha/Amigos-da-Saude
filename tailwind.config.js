@@ -11,6 +11,7 @@ export default {
     },
     colors: {
       "branco": "#F6FFFF",
+      "branco1": "#FFFFFF",
       "bege": "#FFF7D6",
       "azul-100": "#4EA6B8;",
       "azul-header": "#2E8496",

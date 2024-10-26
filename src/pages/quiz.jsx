@@ -2,6 +2,8 @@ import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ExamesContext } from "../context/ExamesProvider";
 import { SearchVideos } from "../components/serchVideos";
+import { CpuChipIcon } from "@heroicons/react/24/solid";
+import { Link } from "react-router-dom";
 
 export default function Quiz() {
   const { exames } = useContext(ExamesContext);
@@ -92,15 +94,24 @@ export default function Quiz() {
   return (
     <div className="flex pb-4 pt-20">
       <div className="flex w-full flex-col gap-6 md:gap-8">
-        <div className="bg-amarelo-fundo w-full">
-          <div className="container mx-auto flex flex-col px-4 py-6">
-            <h2 className="text-azul-tipografia-titulo font-yanone text-[3rem] font-bold tracking-wide">
+        <div className="w-full bg-amarelo-fundo">
+          <div className="container mx-auto flex flex-col px-4 py-6 md:gap-1 gap-3">
+            <h2 className="font-yanone text-[3rem] font-bold tracking-wide text-azul-tipografia-titulo">
               SUPER QUIZ
             </h2>
-            <p className="text-cinza-tipografia-texto font-poppins text-xl">
+            <p className="font-poppins text-xl text-cinza-tipografia-texto">
               Aqui voce podera brincar no nosso quiz sobre os videos que voce
               acabou de assitir.
             </p>
+            <p className="font-poppins text-xl font-semibold text-azul-tipografia-texto md:text-lg">
+              Ou faça o Quiz usando um controle:
+            </p>
+            <Link
+              to="/quizArduino"
+              className="size-8 text-azul-tipografia-titulo flex transform md:hover:scale-110"
+            >
+              <CpuChipIcon />
+            </Link>
           </div>
         </div>
 
@@ -115,13 +126,13 @@ export default function Quiz() {
               <div className="flex flex-col gap-4">
                 <h3
                   id="pergunta-index"
-                  className="text-azul-tipografia-titulo font-poppins text-4xl font-bold tracking-wide"
+                  className="font-poppins text-4xl font-bold tracking-wide text-azul-tipografia-titulo"
                 >
                   PERGUNTA {indexQuiz + 1}:
                 </h3>
                 <h3
                   id="pergunta"
-                  className="text-azul-tipografia-texto font-nunito text-xl font-semibold md:text-3xl"
+                  className="font-nunito text-xl font-semibold text-azul-tipografia-texto md:text-3xl"
                 >
                   {findExame.quiz[0].pergunta}
                 </h3>
@@ -131,28 +142,28 @@ export default function Quiz() {
                 <p
                   id="alternativa1"
                   onClick={() => checarResposta()}
-                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa1}
                 </p>
                 <p
                   id="alternativa2"
                   onClick={() => checarResposta()}
-                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa2}
                 </p>
                 <p
                   id="alternativa3"
                   onClick={() => checarResposta()}
-                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa3}
                 </p>
                 <p
                   id="alternativa4"
                   onClick={() => checarResposta()}
-                  className="text-cinza-tipografia-texto font-medium md:hover:scale-105 transition active:bg-azul-fundo-active-quiz border-azul-fundo-borda-quiz bg-azul-fundo-quiz md:hover:bg-azul-fundo-hover cursor-pointer rounded-lg border px-3 py-5 pl-5 text-lg hover:bg-lime-50 md:p-3"
+                  className="hover:bg-lime-50 cursor-pointer rounded-lg border border-azul-fundo-borda-quiz bg-azul-fundo-quiz px-3 py-5 pl-5 text-lg font-medium text-cinza-tipografia-texto transition active:bg-azul-fundo-active-quiz md:p-3 md:hover:scale-105 md:hover:bg-azul-fundo-hover"
                 >
                   {findExame.quiz[0].alternativas.alternativa4}
                 </p>
