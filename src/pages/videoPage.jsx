@@ -27,16 +27,16 @@ export default function VideoPage() {
 
   return (
     <div className="flex w-full flex-col pt-20">
-      <div className=" bg-amarelo-100 p-2">
-        <h1 id="exame-title" className="font-yanone py-3 text-3xl container mx-auto">
+      <div className=" bg-amarelo-fundo p-4">
+        <h1 id="exame-title" className="font-yanone py-3 text-4xl tracking-wider md:tracking-wide text-azul-tipografia-titulo container mx-auto">
           Tema: {findExame.name}
         </h1>
       </div>
 
-      <div className="container mx-auto grow">
+      <div className="container mx-auto grow ">
         <div
           id="exame"
-          className="relative h-[500px] gap-4 pt-3 sm:border md:h-[600px]"
+          className="relative h-[500px] gap-4 pt-3 sm:border border-azul-header md:h-[620px] bg-azul-fundo-2 mt-3"
         >
           <div id="personagem" className="absolute w-36 md:w-52">
             <div className="relative">
@@ -70,7 +70,7 @@ export default function VideoPage() {
 
           <p
             id="text-field"
-            className="0 absolute bottom-1 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border bg-amarelo-100 px-5 py-5 font-poppins text-xl"
+            className="bg-bege shadow-md shadow-azul-borda-fundo-1 mb-3 0 absolute bottom-1 left-[50%] z-10 w-[90%] translate-x-[-50%] rounded-lg border px-5 py-5 font-poppins text-xl md:text-2xl"
           >
             {findExame.videoDialogo[0]}
           </p>

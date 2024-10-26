@@ -15,7 +15,7 @@ export const SearchVideos = ({ destino }) => {
           <input
             type="text"
             onChange={() => searchExames()}
-            className="w-[95%] bg-branco px-2 py-1 font-nunito focus:outline-none md:w-[90%]"
+            className="w-[95%] bg-branco px-2 py-1 font-nunito focus:outline-none md:w-[90%] "
             placeholder="Pesquisar"
           />
           <div className="flex h-full items-center justify-center">
@@ -28,7 +28,7 @@ export const SearchVideos = ({ destino }) => {
         {filteredExames.map((quiz) => (
           <li
             key={quiz.id}
-            className="border-azul-header bg-branco min-h-[30%] transform cursor-pointer rounded-lg border md:min-h-[35%]"
+            className="border-azul-header bg-branco min-h-[30%] transform cursor-pointer rounded-lg border md:min-h-[35%] "
             onClick={() => navigate(`/${destino}/${quiz.id}`)}
           >
             <p className="px-3 py-2 text-lg font-semibold">{quiz.name}.</p>
